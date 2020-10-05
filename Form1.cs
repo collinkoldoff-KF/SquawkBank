@@ -119,7 +119,8 @@ namespace SquawkBank
         }
         public static void sendNewSquawk()
         {
-            SendKeys.SendWait("{BACKSPACE}" + lastSquawk);
+            int sender = lastSquawk - 1;
+            SendKeys.SendWait("{BACKSPACE}" + sender);
         }
     }
 }
