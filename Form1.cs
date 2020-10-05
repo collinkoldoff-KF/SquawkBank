@@ -105,9 +105,9 @@ namespace SquawkBank
 
             lastSquawk = num1 + num2 + num3 + num4;
 
-            if (lastSquawk >= endSquawk)
+            if (lastSquawk > endSquawk)
             {
-                lastSquawk = startSquawk;
+                lastSquawk = startSquawk + 1;
             }
 
             return lastSquawk;
