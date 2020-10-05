@@ -38,7 +38,7 @@ namespace SquawkBank.Core
         private void CheckPtmDevice()
         {
             bool isPressed = false;
-            isPressed = (GetAsyncKeyState(Keys.A) & 32768) > 0 && (GetAsyncKeyState(Keys.F9) & 32768) > 0;
+            isPressed = (GetAsyncKeyState(Keys.S) & 32768) > 0 && (GetAsyncKeyState(Keys.F9) & 32768) > 0;
 
             if (isPressed != mPtmStatus)
             {
