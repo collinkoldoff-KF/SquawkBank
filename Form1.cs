@@ -22,7 +22,7 @@ namespace SquawkBank
             startSquawk = int.Parse(textBox1.Text);
             endSquawk = int.Parse(textBox2.Text);
             lastSquawk = int.Parse(textBox1.Text);
-            label2.Text = lastSquawk.ToString();
+            label4.Text = lastSquawk.ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace SquawkBank
         {
             startSquawk = int.Parse(textBox1.Text);
             lastSquawk = int.Parse(textBox1.Text);
-            label2.Text = lastSquawk.ToString();
+            label4.Text = lastSquawk.ToString();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -65,13 +65,13 @@ namespace SquawkBank
             }
         }
 
-        private void button1_Click(object sender, MouseEventArgs e)
+        public void button1_Click(object sender, MouseEventArgs e)
         {
-            label2.Text = lastSquawk.ToString();
-            Debug.WriteLine(IncrementSquawk());
+            label4.Text = lastSquawk.ToString();
+            IncrementSquawk();
         }
 
-        private static int IncrementSquawk()
+        public static int IncrementSquawk()
         {
             int num1;
             int num2;
@@ -108,9 +108,18 @@ namespace SquawkBank
             return lastSquawk;
         }
 
+        public static void updateLabel2()
+        {
+            label4.Text = lastSquawk.ToString();
+        }
+
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+        public static void sendNewSquawk()
+        {
+            SendKeys.SendWait("{BACKSPACE}" + lastSquawk);
         }
     }
 }
